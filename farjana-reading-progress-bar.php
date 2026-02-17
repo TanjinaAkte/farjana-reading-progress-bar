@@ -4,7 +4,7 @@
  * Author URI: https://github.com/TanjinaAkte
  * Plugin URI: https://wordpress.org/plugins/farjana-reading-progress-bar/
  * Description: Farjana Reading Progress Bar is a professional and lightweight plugin. It displays an estimated reading time and a live scroll progress bar on your WordPress posts.
- * Version: 1.3.0
+ * Version: 1.4.0
  * Author: Farjana
  * License: GPL2
  * Text Domain: farjana-reading-progress-bar
@@ -29,8 +29,9 @@ class Farjana_Reading_Progress_Bar {
         define( 'FRPB_VERSION', '1.0.1' );
         define( 'FRPB_PATH', plugin_dir_path( __FILE__ ) );
         define( 'FRPB_URL', plugin_dir_url( __FILE__ ) );
+        define( 'FRPB__PLUGIN_FILE', __FILE__ );  
     }
-
+ 
     private function includes() {
         if ( file_exists( FRPB_PATH . 'includes/frpb-calculator.php' ) ) {
             require_once FRPB_PATH . 'includes/frpb-calculator.php';
@@ -38,6 +39,8 @@ class Farjana_Reading_Progress_Bar {
         if ( file_exists( FRPB_PATH . 'includes/frpb-settings.php' ) ) {
             require_once FRPB_PATH . 'includes/frpb-settings.php';
         }
+         require_once FRPB_PATH . 'admin-welcome.php';
+
     }
 
     public function activate() {

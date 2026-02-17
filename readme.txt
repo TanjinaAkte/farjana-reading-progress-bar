@@ -4,9 +4,10 @@ Tags: reading progress, progress bar, reading time, scroll indicator, estimated 
 Requires at least: 5.0
 Tested up to: 6.9
 Requires PHP: 7.0
-Stable tag: 1.3.0
-Version: 1.3.0
+Stable tag: 1.4.0
+Version: 1.4.0
 License: GPLv2 or later
+
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Show beautiful reading progress bar with time estimation. Features smart mood detection, glassmorphism design, and engaging completion celebrations!
@@ -218,26 +219,19 @@ Visit the plugin's support forum on WordPress.org or contact us directly through
 4. **Engaging completion celebration** - Beautiful "Shukriya!" popup with glassmorphism design and confetti animation appears when readers finish the article, showing appreciation in a delightful way
 5. **Professional desktop view** - Clean, modern display on large screens with smooth animations and premium glassmorphism effects showing perfect integration with content
 6. **Multiple views and configurations** - Demonstrating plugin flexibility across different layouts, color schemes, and design options for various use cases
-
 == Changelog ==
 
-= 1.3.0 - 2026-02-09 =
-* New: Enable/Disable celebration popup option in settings
-* New: Users can now control whether to show "Shukriya!" popup
-* Improved: Better user control over plugin features
-* Improved: Settings page organization with new checkbox option
-* Enhanced: More flexibility for different use cases
+= 1.4.0 - 2026-02-18 =
+* New: Added a professional Welcome Screen for new users.
+* Improved: UI enhancements for the settings page.
+* Enhanced: Better onboarding experience for first-time users.
 
 = 1.3.0 - 2026-02-09 =
 * Major Update: All features now FREE forever!
-* New: Dynamic color support for all progress bar styles
-* New: Helper functions for automatic color shade generation
-* New: Gradient, Striped, Animated styles now use user's selected color
-* Improved: Better color contrast and visibility
-* Updated: Removed "Pro Version" - Everything is FREE!
-* Fixed: Progress bar rendering consistency
-* Enhanced: Overall performance improvements
-
+* New: Enable/Disable celebration popup option in settings.
+* New: Dynamic color support for Gradient, Striped, and Animated styles.
+* Updated: Removed "Pro Version" labeling.
+* Fixed: Progress bar rendering consistency.
 = 1.1.0 =
 * New: Interactive Glassmorphism Reward Card
 * New: Mood-based smart messages (Happy/Sad/Default)
