@@ -135,12 +135,24 @@
                     font-size: 24px;
                     color: #2271b1;
                 }
+                /* New Note Box Style */
+                .frpb-dev-note {
+                    background: #f0f6fb;
+                    border-left: 4px solid #2271b1;
+                    padding: 20px;
+                    margin-top: 40px;
+                    border-radius: 0 5px 5px 0;
+                }
+                .frpb-dev-note h3 {
+                    margin-top: 0;
+                    color: #2271b1;
+                }
 
             </style>
 
             <div class="frpb-welcome-header">
-                <h1>🎉welcome to Farjana Reading Progress Bar!</h1>
-                <p> Thank you for installing! Les's get you started in 3 easy steps.</p>
+                <h1>🎉 Welcome to Farjana Reading Progress Bar!</h1>
+                <p> Thank you for installing! Let's get you started in 3 easy steps.</p>
              </div> 
             
             <div class="frpb-setup-steps">
@@ -160,8 +172,8 @@
                     <h3>You're Done!</h3>
                     <p>View your beautiful progress bar</p>
                 </div>
-                  </div>
             </div>
+
             <div class="frpb-actions">
                 <a href="<?php echo admin_url('options-general.php?page=farjana-reading-progress-bar'); ?>"
                 class="frpb-btn">
@@ -205,7 +217,12 @@
                     </div>
                 </div>
             </div>
-            
+
+            <div class="frpb-dev-note">
+                <h3>💌 A Personal Note from Farjana (আমার কিছু কথা)</h3>
+                <p><strong>English:</strong> I am a self-taught developer learning everything on my own. This plugin is a result of my passion and hard work. Since I am still learning, please let me know if you find any bugs. If you don't tell me, I won't know how to improve. Also, if you need any small custom features, just ask—I will add them for FREE! By helping you with Your support is my biggest inspiration! <strong>FREE</strong> these features, I will also get the chance to learn new things and improve my skills.</p>
+                <p style="margin-bottom: 0;"><strong>বাংলা:</strong> আমি নিজে নিজে চেষ্টা করে প্লাগিন ডেভেলপমেন্ট শিখছি। যেহেতু আমি এখনো নতুন, তাই আমার কাজে কোনো ভুল থাকলে দয়া করে আমাকে বুঝিয়ে বলবেন। আপনারা না জানালে আমি শিখতে পারব না। এছাড়া আপনাদের যদি ছোট কোনো ফিচারের প্রয়োজন হয়, আমাকে জানান—আমি আপনার জন্য সেটি বিনা মূল্যে </strong> যোগ করে দেব। আপনাদের সাহায্য করার মাধ্যমে আমি নিজেও নতুন অনেক কিছু শিখতে পারব। আপনাদের সাহায্যই আমার শেখার বড় অনুপ্রেরণা।</p>
+            </div>
             <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid #e0e0e0;">
                 <p style="color: #666;">Need help? <a href="https://wordpress.org/support/plugin/farjana-reading-progress-bar/" target="_blank">Visit Support Forum</a></p>
             </div>
@@ -217,21 +234,15 @@
      * Admin notice দেখানো
      */
     public function show_welcome_notice() {
-        // যদি already dismiss করা হয়ে থাকে
         if (get_option('frpb_welcome_notice_dismissed')) {
             return;
         }
-        
-        // যদি settings page এ থাকি
         if (isset($_GET['page']) && $_GET['page'] === 'farjana-reading-progress-bar') {
             return;
         }
-        
-        // Welcome screen flag check করা
         if (!get_option('frpb_show_welcome_screen')) {
             return;
         }
-        
         ?>
         <div class="notice notice-success is-dismissible frpb-welcome-notice">
             <p>
@@ -242,7 +253,6 @@
         </div>
         <script>
         jQuery(document).ready(function($) {
-            // Notice dismiss করা
             $('.frpb-welcome-notice').on('click', '.notice-dismiss', function() {
                 jQuery.post(ajaxurl, {
                     action: 'frpb_dismiss_welcome_notice'
@@ -264,5 +274,4 @@
     }
 }
 
-// Class initialize করা
 new FRPB_Welcome_Screen();
