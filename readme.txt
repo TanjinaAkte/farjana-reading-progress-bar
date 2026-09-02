@@ -2,7 +2,7 @@
 Contributors: farjanaplugin
 Tags: reading progress, progress bar, reading time, scroll indicator, estimated time, wpm calculator, user engagement, reading tracker, scroll bar, blog tools
 Requires at least: 5.0
-Tested up to: 6.9
+Tested up to: 7.1
 Requires PHP: 7.0
 Stable tag: 1.4.0
 Version: 1.4.0
