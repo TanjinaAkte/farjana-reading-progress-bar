@@ -4,8 +4,8 @@ Tags: reading progress, progress bar, reading time, scroll indicator, estimated 
 Requires at least: 5.0
 Tested up to: 7.1
 Requires PHP: 7.0
-Stable tag: 1.4.0
-Version: 1.4.0
+Stable tag: 1.5.1
+Version: 1.5.1
 License: GPLv2 or later
 
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
